@@ -1,10 +1,9 @@
+/* Mover todas las importaciones al principio */
 @import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-@import "tailwindcss";
-
+/* Aquí ya puedes colocar otras reglas, como @theme */
 @theme {
   --color-primary: #030014;
 
@@ -22,6 +21,7 @@
   --background-image-hero-pattern: url("/hero-bg.png");
 }
 
+/* Luego las demás reglas de @layer */
 @layer base {
   body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -144,6 +144,7 @@
   }
 }
 
+/* Utilidades (se quedan igual) */
 @utility text-gradient {
   @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
 }
